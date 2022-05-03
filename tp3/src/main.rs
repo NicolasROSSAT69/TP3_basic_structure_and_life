@@ -1,3 +1,27 @@
+fn isbig(input: String, taille: usize) -> bool {
+    if input.len() > taille {
+        true
+    } else {
+        false
+    }
+}
+
 fn main() {
-    println!("Hello, world!");
+    let s1 = String::from("hello");
+    let s2 = "world".to_string();
+    let s3 = String::from("bonjour");
+    let s4 = String::from("hola");
+
+    println!("1 s1: {}", s1);
+    println!("2 s1: {}", s1);
+    println!("1 s2: {}", s2);
+    println!("2 s2: {}", s2);
+    println!("1 s3: {}", s3);
+    println!("2 s3: {}", s3);
+    println!("1 s4: {}", s4);
+    println!("2 s4: {}", s4);
+
+    let name = "guillaume".to_string();
+    println!("{}", isbig(name.clone(), 10));
+    println!("{}", isbig(name.clone(), 5));
 }
