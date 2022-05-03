@@ -1,5 +1,5 @@
-fn isbig(input: String, taille: usize) -> bool {
-    if input.len() > taille {
+fn isbig(s: &String, n: usize) -> bool {
+    if s.len() > n {
         true
     } else {
         false
@@ -22,6 +22,6 @@ fn main() {
     println!("2 s4: {}", s4);
 
     let name = "guillaume".to_string();
-    println!("{}", isbig(name.clone(), 10));
-    println!("{}", isbig(name.clone(), 5));
+    println!("{}", isbig(&name, 10));
+    println!("{}", isbig(&name, 5));
 }
